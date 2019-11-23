@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    title= "Star wars"
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+.container
+  br
+  .jumbotron
+    h1
+      | Ingreso de personajes.
+    .form-group
+      label.col-sm-2.col-form-label(for='carnet') Personaje: 
+      br
+      input#carnet_field.form-control(type='text' name='carnet')
+    .form-group
+      label(for='schedule') Seleccione especie:
+      select#schedule_field.form-control(name='schedule')
+        option Humano
+        option Ewok
+        option Genosianos
+        option Gorax
+        option Jawa
+    .form-group
+      label.col-sm-2.col-form-label(for='carnet') Planeta: 
+      br
+      input#carnet_field.form-control(type='text' name='carnet')
+    .form-group
+      label.col-sm-2.col-form-label(for='carnet') Actor:
+      br
+      input#carnet_field.form-control(type='text' name='carnet')
+    .form-group
+      .custom-control.custom-switch
+        input#late_switch.custom-control-input(type='checkbox')
+        label.custom-control-label(for='late_switch') Genero masculino?
+    .form-group
+      button#submit_btn.btn.btn-danger(type='button' disabled='') Ingresar
+  hr
+  section
+    table.table.table-hover
+      thead
+        tr.table-dark
+          th(scope='col') Nombre
+          th(scope='col') Especie
+          th(scope='col') Genero
+          th(scope='col') Planeta de procedencia
+          th(scope='col') Perteneciente a
+          th(scope='col') Actor que lo interpreta
+      tbody#table_body
+script(src='../js/main.js')
